@@ -9,6 +9,8 @@ public class Tile {
 	public Sprite sprite;
 
 	public static Tile grass = new GrassTile(Sprite.grass);
+	public static Tile ocean = new OceanTile(Sprite.ocean);
+	public static Tile sand = new SandTile(Sprite.sand);
 
 	public Tile(Sprite sprite) {
 		this.sprite = sprite;

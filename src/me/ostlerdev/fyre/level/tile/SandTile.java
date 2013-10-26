@@ -2,10 +2,9 @@ package me.ostlerdev.fyre.level.tile;
 
 import me.ostlerdev.fyre.graphics.Sprite;
 
-public class GrassTile extends Tile {
+public class SandTile extends Tile {
 
-	public GrassTile(Sprite sprite) {
+	public SandTile(Sprite sprite) {
 		super(sprite);
 	}
-
 }
