@@ -2,6 +2,7 @@ package me.ostlerdev.fyre.level.tile;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.File;
 
 import javax.imageio.ImageIO;
 
@@ -19,7 +20,10 @@ public class TileLoader {
 
 	public Tile[] loadFromFile(String path) {
 		try {
-			map = ImageIO.read(TileLoader.class.getResource(path));
+			if(new File(path).exists())
+				map = ImageIO.read(TileLoader.class.getResource(path));
+			else
+				throw new IOException("File existence check failed before attempting to read the file on: " + path);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
