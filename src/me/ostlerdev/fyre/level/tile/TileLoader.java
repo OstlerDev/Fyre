@@ -19,7 +19,11 @@ public class TileLoader {
 
 	public Tile[] loadFromFile(String path) {
 		try {
-			map = ImageIO.read(TileLoader.class.getResource(path));
+			File tileFile = new File(path);
+			if(tileFile.exists() && tileFile.canRead() && !fileTile.isDirectory())
+			{
+				map = ImageIO.read(TileLoader.class.getResource(tileFile.getPath()));
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
