@@ -14,6 +14,6 @@ public class MainLevel extends Level {
 
 	protected void generateLevel(){
 		TileLoader mainMap = new TileLoader(tiles);
-		tiles = mainMap.loadFromFile("/maps/mapTest.png");
+		tiles = mainMap.loadFromFile(Game.mapFilePath);
 	}
 }

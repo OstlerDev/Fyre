@@ -13,7 +13,7 @@ public class TileLoader {
 
 	public TileLoader(Tile[] array) {
 		
-		array = loadFromFile("/maps/mapTest.png");
+		array = loadFromFile(Game.mapFilePath);
 
 	}
 
