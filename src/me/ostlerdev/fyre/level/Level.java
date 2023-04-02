@@ -25,7 +25,7 @@ public class Level {
 	}
 
 	private void loadLevel(String path) {
-		TileLoader mainMap = new TileLoader(tiles);
+		TileLoader mainMap = new TileLoader();
 		tiles = mainMap.loadFromFile(path);
 		
 		for (int y = 0; y < MAP_SIZE; y++)

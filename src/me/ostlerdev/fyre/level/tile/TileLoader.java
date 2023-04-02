@@ -31,14 +31,23 @@ public class TileLoader {
 		
 		mapTiles= new Tile[mapPixels.length];
 		
-		for (int i = 0; i < mapPixels.length; i++){
-			//if (mapPixels[i] != -16711681) System.out.println(mapPixels[i]);
-			//Ocean Tile
-			if (mapPixels[i] == -16711681) mapTiles[i] = Tile.ocean;
-			//Sand Tile
-			if (mapPixels[i] == -256) mapTiles[i] = Tile.sand;
-			//Grass Tile
-			if (mapPixels[i] == -16711936) mapTiles[i] = Tile.grass;
+		for (int i = 0; i < mapPixels.length; i++)
+		{
+			int mapPixel = mapPixels[i];
+			switch(mapPixel)
+			{
+				case -16711681:
+					mapTiles[i] = Tile.ocean;
+					break;
+				case -256:
+					mapTiles[i] = Tile.sand;
+					break;
+				case -16711936:
+					mapTiles[i] = Tile.grass;
+					break;
+				default:
+					break;
+			}
 		}
 		
 		return mapTiles;
