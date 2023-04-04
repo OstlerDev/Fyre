@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"   
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0   
+http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <groupId>me.osterldev.fyre</groupId>
+  <artifactId>Fyre</artifactId>
+  <version>1</version>
+  <packaging>pom</packaging>
+  <name>Fyre</name>  
+  <url>https://github.com/OstlerDev/Fyre</url>  
+  <dependencies>  
+    <dependency>  
+      <groupId>junit</groupId>  
+      <artifactId>junit</artifactId>  
+      <version>5.9.2</version>  
+      <scope>test</scope>  
+    </dependency>  
+  </dependencies>
+  <build>
+    <sourceDirectory>src/</sourceDirectory>
+    <resources>
+         <resource>
+            <directory>res/</directory>
+         </resource>
+      </resources>
+       <plugins>
+        <plugin>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+               <execution>
+               <id>default-clean</id>
+               <phase>clean</phase>
+               <goals>
+                  <goal>clean</goal>
+               </goals>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.3.0</version>
+            <executions>
+               <execution>
+                  <id>default-jar</id>
+                  <phase>package</phase>
+                  <goals>
+                     <goal>jar</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+       </plugins>
+  </build>
+</project>
