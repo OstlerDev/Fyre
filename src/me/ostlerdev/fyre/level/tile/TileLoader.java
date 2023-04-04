@@ -11,10 +11,7 @@ public class TileLoader {
 	private int[] mapPixels = null;
 	private Tile[] mapTiles = null;
 
-	public TileLoader(Tile[] array) {
-		
-		array = loadFromFile(Game.mapFilePath);
-
+	public TileLoader() {
 	}
 
 	public Tile[] loadFromFile(String path) {
