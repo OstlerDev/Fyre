@@ -2,7 +2,7 @@ package me.ostlerdev.fyre.level.tile;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-
+import java.io.File;
 import javax.imageio.ImageIO;
 
 public class TileLoader {
@@ -17,7 +17,7 @@ public class TileLoader {
 	public Tile[] loadFromFile(String path) {
 		try {
 			File tileFile = new File(path);
-			if(tileFile.exists() && tileFile.canRead() && !fileTile.isDirectory())
+			if(tileFile.exists() && tileFile.canRead() && !tileFile.isDirectory())
 			{
 				map = ImageIO.read(TileLoader.class.getResource(tileFile.getPath()));
 			}

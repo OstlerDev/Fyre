@@ -1,7 +1,7 @@
 package me.ostlerdev.fyre.level;
 
 import java.util.Random;
-
+import me.ostlerdev.fyre.Game;
 import me.ostlerdev.fyre.level.tile.TileLoader;
 
 public class MainLevel extends Level {
