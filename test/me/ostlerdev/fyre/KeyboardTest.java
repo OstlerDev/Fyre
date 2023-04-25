@@ -7,12 +7,23 @@ import org.junit.jupiter.api.Assertions;
 import java.awt.event.KeyEvent;
 public class KeyboardTest {
     @Test
-    @DisplayName("No key pressed")
+    @DisplayName("No key pressed, but caught")
     void noKeyPressedTest()
     {
         KeyEvent ke = null;
-        Assertions.assertThrows(NullPointerException.class, () -> {
+        Assertions.assertDoesNotThrow(() -> {
             (new Keyboard()).keyPressed(ke);
         });
     }
+
+    @Test
+    @DisplayName("No key pressed, but caught")
+    void noKeyReleasedTest()
+    {
+        KeyEvent ke = null;
+        Assertions.assertDoesNotThrow(() -> {
+            (new Keyboard()).keyReleased(ke);
+        });
+    }
 }
+
