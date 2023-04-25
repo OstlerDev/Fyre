@@ -19,7 +19,7 @@ public class Game extends Canvas{
 	//Game.mapFilePath for the static path of the mapTest.png file used elsewhere in the program
 	public static String mapFilePath = "/maps/mapTest.png";
 	private static final long serialVersionUID = 3370105497890777468L;
-	public static int width = 300;
+	public static int width = 1280;
 	public static int height = width / 16 * 9;
 	public static int scale = 3;
 	
